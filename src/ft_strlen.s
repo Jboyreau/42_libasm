@@ -7,4 +7,4 @@ ft_strlen:
 	repnz scasb
 	lea rax, [rdi - 1]	; &rax = &(rdi - 1) 
 	sub rax,rsi			; calcule de l'output rax = rax - rsi
-    ret					; Retour à l'appelant
+    ret					; Retour a l'appelant

@@ -1,7 +1,7 @@
 SRC_DIR=./src/
 NAME=libasm.a
 OUTPUT=tester
-OBJ=$(SRC_DIR)ft_strlen.o
+OBJ=$(SRC_DIR)ft_strlen.o $(SRC_DIR)ft_strcpy.o
 CFLAGS=-f elf64 
 CPPFLAGS=rcs
 
@@ -23,6 +23,6 @@ test : $(NAME)
 #$@: Nom de la regle
 #$<: Nom de la premiere dépendance
 #$^: Nom de toute les dependances
-%.o: %.asm
+%.o: %.s
 	nasm $(CFLAGS) $< -o $@
 .PHONY: all clean fclean re test
