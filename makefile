@@ -1,7 +1,8 @@
 SRC_DIR=./src/
 NAME=libasm.a
 OUTPUT=tester
-OBJ=$(SRC_DIR)ft_strlen.o $(SRC_DIR)ft_strcpy.o $(SRC_DIR)ft_strcmp.o
+OBJ=$(SRC_DIR)ft_strlen.o $(SRC_DIR)ft_strcpy.o $(SRC_DIR)ft_strcmp.o\
+$(SRC_DIR)ft_strdup.o $(SRC_DIR)ft_write.o $(SRC_DIR)ft_read.o
 CFLAGS=-f elf64 
 CPPFLAGS=rcs
 
