@@ -16,7 +16,8 @@ int main(void)
 //str_cpy test:
 	printf("ft_strcpy(dest, \"\") -> %s\n",ft_strcpy(dest_buffer, ""));
 	printf("ft_strcpy(dest, \"\\01\") -> %s\n",ft_strcpy(dest_buffer, "\01"));
-	printf("ft_strcpy(dest, \"Hello World\") -> %s\n\n",ft_strcpy(dest_buffer, "Hello Wolrd"));
+	printf("ft_strcpy(dest, \"Hello World\") -> %s\n",ft_strcpy(dest_buffer, "Hello World"));
+	printf("ft_strcpy(dest, \"Hello Wor\\0ld\") -> %s\n\n",ft_strcpy(dest_buffer, "Hello Wor\0ld"));
 //str_cmp:
 	printf("ft_strcmp(\"\", \"\") -> %d\n", ft_strcmp("", ""));
 	printf("ft_strcmp(\"y\", \"\") -> %d\n", ft_strcmp("y", ""));
