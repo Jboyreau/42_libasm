@@ -43,11 +43,11 @@ int main(void)
 	if (ptr)
 		free(ptr);
 //write
-	printf("ft_write errno -> %ld\n", ft_write(54, "yolo", 5));
+	printf("ft_write -> %ld; errno -> %d\n", ft_write(54, "yolo", 5), errno);
 	len = ft_write(1, "ft_write test", 13);
 	printf(" -> %ld\n\n", len);
 //read
-	printf("ft_read errno -> %ld\n", ft_read(54, input_buffer, 5));
+	printf("ft_read -> %ld; errno -> %d\n", ft_read(54, input_buffer, 5), errno);
 	len = ft_read(0, input_buffer, 11);
 	printf("ft_read test -> %ld\n\n", len);
 
