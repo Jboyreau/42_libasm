@@ -8,7 +8,9 @@ ft_strdup:
 	inc rax				; ++RAX pour \0
 	push rax			; SAVE string_len pour movs
 	mov rdi,rax			; RDI = string_len pour malloc
+	sub rsp,8			; Stack alignement
 	call malloc			; RAX = return value
+	add rsp,8			; Stack alignement
 	test rax,rax		; RAX & RAX
 	jz malloc_failed
 	pop rcx				; RCX = string_len + 1

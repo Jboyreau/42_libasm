@@ -5,11 +5,9 @@ ft_strcmp:
 loop_cmp:
 	mov cl,byte[rdi+r8]	; CL = [RDI]
 	mov dl,byte[rsi+r8]	; DL = [RSI]
+	test cl, cl			; CL & CL
+	je loop_cmp_end		; Quitte la boucle si cl est null
 	inc r8				; ++R8
-	mov al,cl			; AL = CL
-	mul dl	 			; AL *= DL
-	test ax,ax			; AL & AL
-	je loop_cmp_end		; Quitte la boucle si al ou bl est null
 	cmp cl,dl			; Compare *str1 et *str2
 	je loop_cmp
 loop_cmp_end:
